@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String nombreJugador1, nombreJugador2;
+		
+		Scanner sc = new Scanner(System.in);
+		sc.useDelimiter("[:\\s]");
+		
+		System.out.println("*** NUEVA PARTIDA ***"
+				+ "1) 2 jugadores"
+				+ "2) Jugar contra la máquina"
+		);
+		
+		System.out.print("Indique el tipo de juego:");
+		int tipoJuego = sc.nextInt();
+		
+		if(tipoJuego==1) {
+			System.out.print("Indique nombre jugador 1:");
+			nombreJugador1 = sc.nextLine();
+			
+			System.out.print("Indique nombre jugador 2:");
+			nombreJugador2 = sc.nextLine();
+		} else {
+			System.out.print("Indique su nombre:");
+			nombreJugador1 = sc.nextLine();
+		}
+		
+		mostrarTablero();
+		
+	}
+
+	private static void mostrarTablero() {
+		
+		int numeroCasilla = 1;
+		for(int fila=0; fila<3; fila++) {
+			for(int columna=0; columna<3; columna++) {
+				System.out.print("_ ("+numeroCasilla+")");
+				numeroCasilla++;
+			}
+			System.out.println("");
+		}
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		 Scanner sc = new Scanner(System.in);
+
+		 // Usamos como delimitador el dos puntos, o bien cualquier
+		 // espacio/fin de línea (el \\s)
+		 sc.useDelimiter("[:\\s]");
+
+		 // Le pedimos al usuario que escriba su nombre
+		 System.out.print("Por favor, escriba su nombre: ");
+		 
+		 // Leer el nombre del usuario
+		 String nombre = sc.nextLine();
+
+		 // Obtenemos el nombre
+		 System.out.println("Bienvenido a nuestra app "+nombre+"\n");
+		 
+		 // Mostramos al usuario las opciones del menú
+		 System.out.print("***** APP REMIX OPERACIONES ****\n"
+		 		+ "* 1. Realizar una suma\n"
+				+ "* 2. Paridad \n"
+		 		+ "* 3. Número primo\n"
+				+"**********************");
+
+	}
+
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		 Scanner sc = new Scanner(System.in);
+
+		 // Usamos como delimitador el dos puntos, o bien cualquier
+		 // espacio/fin de línea (el \\s)
+		 sc.useDelimiter("[:\\s]");
+
+		 // Leemos los tres enteros
+		 int a = sc.nextInt();
+		 int b = sc.nextInt();
+		 int c = sc.nextInt();
+
+		 // Obtendremos 11-33-44 de salida.
+		 System.out.println(a +"-"+ b +"-"+ c);
+
+	}
+
+}

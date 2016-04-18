@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		sc.useDelimiter("[:\\s]");
+		
+		System.out.println("Seleccione el tipo de juego:"
+				+ "1) 2 jugadores"
+				+ "2) Jugar contra la máquina"
+		);
+
+	}
+
+}
