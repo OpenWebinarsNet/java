@@ -63,7 +63,7 @@ public class Juego implements InterfaceJuego {
 	// Declaración e implementación de los métodos de la clase
 	
 	// Función para establecer el turno del jugador siguiente
-	public void cambiarTurnoJugador(int casillaJugada) {
+	private void cambiarTurnoJugador(int casillaJugada) {
 		
 		if(esTurnoJugador1) {
 			tablero[casillaJugada] = 'X';

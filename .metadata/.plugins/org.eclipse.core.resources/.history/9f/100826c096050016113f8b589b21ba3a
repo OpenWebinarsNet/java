@@ -1,0 +1,4 @@
+
+public interface InterfaceJuego {
+	private void cambiarTurnoJugador(int casillaJugada);
+}
