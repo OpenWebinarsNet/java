@@ -1,0 +1,10 @@
+
+public class Juego {
+	public String nombreJugador1, nombreJugador2;
+	public boolean juegoFinalizado;
+	public int numeroDeTurnos;
+	public boolean esTurnoJugador1;
+	
+	
+	
+}

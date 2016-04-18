@@ -1,0 +1,92 @@
+
+public class Juego {
+	// Declaración de atributos de la clase
+	public String nombreJugador1, nombreJugador2;
+	public boolean juegoFinalizado;
+	public int numeroDeTurnos;
+	public boolean esTurnoJugador1;
+	public char[] tablero; 
+	public final static int JUEGO_PAREJA = 1;
+	public final static int JUEGO_MAQUINA = 2;
+	
+	// 1 > jugar contra otro jugador, 2 > jugar contra la máquina
+	public int tipoJuego;
+	// | 0 | 1  | 2 | 3 | 4  | 5 | 6 | 7 | 8
+	// | X | O  |   | X | O  | X |   |   | 
+	
+	// Definición de constructores
+	public Juego() {
+		nombreJugador1 = "";
+		nombreJugador2 = "";
+		juegoFinalizado = false;
+		numeroDeTurnos = 0;
+		esTurnoJugador1 = true;
+		tablero = new char[9];
+		tipoJuego = 1;
+	}
+	
+	// En este constructor se utilizan 2 parámetros
+	// para definir los nombres de los 2 jugadores
+	public Juego(String nombreJugador1, String nombreJugador2) {
+		this.nombreJugador1 = nombreJugador1;
+		this.nombreJugador2 = nombreJugador2;
+		juegoFinalizado = false;
+		numeroDeTurnos = 0;
+		esTurnoJugador1 = true;
+		tablero = new char[9];
+		tipoJuego = 1;
+	}
+	
+	// Este constructor se utiliza cuando sólo va a jugar un
+	// jugador, ya que se recibe por parámetro un único nombre
+	public Juego(String nombreJugador1) {
+		this.nombreJugador1 = nombreJugador1;
+		this.nombreJugador2 = "";
+		juegoFinalizado = false;
+		numeroDeTurnos = 0;
+		esTurnoJugador1 = true;
+		tablero = new char[9];
+		tipoJuego = 2;
+	}
+	
+	// Declaración e implementación de los métodos de la clase
+	
+	// Función para establecer el turno del jugador siguiente
+	public void cambiarTurnoJugador() {
+		if(esTurnoJugador1) {
+			esTurnoJugador1 = false;
+		} else {
+			esTurnoJugador1 = true;
+		}
+	}
+	
+	// Función para contabilizar el número de turnos de una jugada
+	public void contadorTurnos() {
+		numeroDeTurnos++;
+	}
+	
+	// Función que determina si en la jugada actual existe una solución
+	// de 3 en Línea
+	// Devuelve true en caso de que exista y false en casa de que no.
+	public boolean existeSolucion() {
+		boolean enc = false;
+		
+		// Búsqueda de posible solución.
+		
+		return enc;
+	}
+	
+	public void siguienteTurno() {
+		if(tipoJuego==JUEGO_MAQUINA) {
+			
+		} else if(tipoJuego==JUEGO_PAREJA) {
+			if(esTurnoJugador1) {
+				System.out.println("Es el turno de "+nombreJugador1);
+			} else {
+				System.out.println("Es el turno de "+nombreJugador2);
+			}
+		}
+	}
+	
+	
+}

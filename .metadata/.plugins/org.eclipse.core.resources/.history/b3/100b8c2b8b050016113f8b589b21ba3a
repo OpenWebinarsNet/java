@@ -1,0 +1,13 @@
+
+public class Juego {
+	// Declaración de atributos de la clase
+	public String nombreJugador1, nombreJugador2;
+	public boolean juegoFinalizado;
+	public int numeroDeTurnos;
+	public boolean esTurnoJugador1;
+	
+	// Declaración e implementación de los métodos de la clase
+	
+	
+	
+}

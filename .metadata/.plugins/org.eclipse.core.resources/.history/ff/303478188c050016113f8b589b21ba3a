@@ -1,0 +1,40 @@
+
+public class Juego {
+	// Declaración de atributos de la clase
+	public String nombreJugador1, nombreJugador2;
+	public boolean juegoFinalizado;
+	public int numeroDeTurnos;
+	public boolean esTurnoJugador1;
+	public char[] tablero; 
+	// | 0 | 1  | 2 | 3 | 4  | 5 | 6 | 7 | 8
+	// | X | O  |   | X | O  | X |   |   | 
+	
+	// Declaración e implementación de los métodos de la clase
+	
+	// Función para establecer el turno del jugador siguiente
+	public void cambiarTurnoJugador() {
+		if(esTurnoJugador1) {
+			esTurnoJugador1 = false;
+		} else {
+			esTurnoJugador1 = true;
+		}
+	}
+	
+	// Función para contabilizar el número de turnos de una jugada
+	public void contadorTurnos() {
+		numeroDeTurnos++;
+	}
+	
+	// Función que determina si en la jugada actual existe una solución
+	// de 3 en Línea
+	// Devuelve true en caso de que exista y false en casa de que no.
+	public boolean existeSolucion() {
+		boolean enc = false;
+		
+		// Búsqueda de posible solución.
+		
+		return enc;
+	}
+	
+	
+}
