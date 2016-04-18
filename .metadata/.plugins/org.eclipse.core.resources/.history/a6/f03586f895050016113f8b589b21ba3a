@@ -75,15 +75,7 @@ public class Juego {
 		
 		contadorTurnos();
 		mostrarTablero();
-		if(!existeSolucionTablero()) {
-			siguienteTurno();
-		} else {
-			System.out.println("PARTIDA FINALIZADA");
-			if(esTurnoJugador1) 
-				System.out.println("Ha ganado "+nombreJugador2);
-			else 
-				System.out.println("Ha ganado "+nombreJugador1);
-		}
+		siguienteTurno();
 	}
 	
 	private void mostrarTablero() {
@@ -114,7 +106,17 @@ public class Juego {
 	private void contadorTurnos() {
 		numeroDeTurnos++;
 	}
-
+	
+	// Función que determina si en la jugada actual existe una solución
+	// de 3 en Línea
+	// Devuelve true en caso de que exista y false en casa de que no.
+	private boolean existeSolucion() {
+		boolean enc = false;
+		
+		// Búsqueda de posible solución.
+		
+		return enc;
+	}
 	
 	public void siguienteTurno() {
 		if(tipoJuego==JUEGO_MAQUINA) {
@@ -215,22 +217,8 @@ public class Juego {
 		soluciones[6] = "0,4,8";
 		soluciones[7] = "2,4,6";
 		
-		for(int i=0; i<soluciones.length; i++) {
-			String stringSolucionActual = soluciones[i];
-			String[] casillasSolucion = stringSolucionActual.split(",");
+		if(tablero[0]==caracterBusqueda && ) {
 			
-			boolean existeSolucionIntermedia = true;
-			for(int j=0; j<casillasSolucion.length; j++) {
-				int casillaActual = Integer.parseInt(casillasSolucion[j]);
-				if(tablero[casillaActual]!=caracterBusqueda) {
-					existeSolucionIntermedia = false;
-					break;
-				}
-			}
-			
-			if(existeSolucionIntermedia) {
-				return true;
-			}
 		}
 		
 		return existe;

@@ -75,15 +75,7 @@ public class Juego {
 		
 		contadorTurnos();
 		mostrarTablero();
-		if(!existeSolucionTablero()) {
-			siguienteTurno();
-		} else {
-			System.out.println("PARTIDA FINALIZADA");
-			if(esTurnoJugador1) 
-				System.out.println("Ha ganado "+nombreJugador2);
-			else 
-				System.out.println("Ha ganado "+nombreJugador1);
-		}
+		siguienteTurno();
 	}
 	
 	private void mostrarTablero() {
@@ -114,7 +106,17 @@ public class Juego {
 	private void contadorTurnos() {
 		numeroDeTurnos++;
 	}
-
+	
+	// Función que determina si en la jugada actual existe una solución
+	// de 3 en Línea
+	// Devuelve true en caso de que exista y false en casa de que no.
+	private boolean existeSolucion() {
+		boolean enc = false;
+		
+		// Búsqueda de posible solución.
+		
+		return enc;
+	}
 	
 	public void siguienteTurno() {
 		if(tipoJuego==JUEGO_MAQUINA) {
@@ -168,27 +170,6 @@ public class Juego {
 	private boolean existeSolucionTablero() {
 		boolean enc = false;
 		
-		// Buscando soluciones del jugador1
-		if(buscaSolucion('X')) {
-			jugadorGanador = 1;
-			juegoFinalizado = true;
-			return true;
-		}
-		
-		// Buscando soluciones del jugador2
-		if(buscaSolucion('O')) {
-			jugadorGanador = 2;
-			juegoFinalizado = true;
-			return true;
-		}
-		
-		return enc;
-	}
-	
-	private boolean buscaSolucion(char caracterBusqueda) {
-		boolean existe = false;
-		String[] soluciones = new String[8];
-		
 		/*
 		 * Soluciones horizontales
 		| 0 |  1  |  2 > 0,1,2
@@ -206,32 +187,22 @@ public class Juego {
 		| 6 |  7  |  8 
 		*/
 		
-		soluciones[0] = "0,1,2";
-		soluciones[1] = "3,4,5";
-		soluciones[2] = "6,7,8";
-		soluciones[3] = "0,3,6";
-		soluciones[4] = "1,4,7";
-		soluciones[5] = "2,5,8";
-		soluciones[6] = "0,4,8";
-		soluciones[7] = "2,4,6";
-		
-		for(int i=0; i<soluciones.length; i++) {
-			String stringSolucionActual = soluciones[i];
-			String[] casillasSolucion = stringSolucionActual.split(",");
+		// Buscando soluciones del jugador1
+		if(buscaSolucion('X')) {
 			
-			boolean existeSolucionIntermedia = true;
-			for(int j=0; j<casillasSolucion.length; j++) {
-				int casillaActual = Integer.parseInt(casillasSolucion[j]);
-				if(tablero[casillaActual]!=caracterBusqueda) {
-					existeSolucionIntermedia = false;
-					break;
-				}
-			}
-			
-			if(existeSolucionIntermedia) {
-				return true;
-			}
+			return true;
 		}
+		
+		
+		// Buscando soluciones del jugador2
+		buscaSolucion('O');
+		
+		return enc;
+	}
+	
+	private boolean buscaSolucion(char caracterBusqueda) {
+		boolean existe = false;
+		
 		
 		return existe;
 	}

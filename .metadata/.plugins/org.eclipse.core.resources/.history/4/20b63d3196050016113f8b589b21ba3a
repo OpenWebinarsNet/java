@@ -79,10 +79,6 @@ public class Juego {
 			siguienteTurno();
 		} else {
 			System.out.println("PARTIDA FINALIZADA");
-			if(esTurnoJugador1) 
-				System.out.println("Ha ganado "+nombreJugador2);
-			else 
-				System.out.println("Ha ganado "+nombreJugador1);
 		}
 	}
 	
