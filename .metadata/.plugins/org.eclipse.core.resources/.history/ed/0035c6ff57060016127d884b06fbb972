@@ -1,0 +1,25 @@
+
+// Clase POJO = Plain Old Java Object 
+
+public class Empleado {
+	public String nombre;
+	public String apellidos;
+	public int salario;
+	public String nif;
+	public String codigoIban;
+	
+	
+	// Constructor
+	public Empleado(String nombre, String apellidos, int salario, String nif, String codigoIban) {
+		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.salario = salario;
+		this.nif = nif;
+		this.codigoIban = codigoIban;
+	}
+	
+	// Getters y setters
+	
+	
+}

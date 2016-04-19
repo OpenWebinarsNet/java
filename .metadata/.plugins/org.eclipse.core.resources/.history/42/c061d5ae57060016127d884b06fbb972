@@ -1,0 +1,10 @@
+
+public class Empleado {
+	public String nombre;
+	public String apellidos;
+	public int salario;
+	public String nif;
+	public String codigoIban;
+	
+	
+}
