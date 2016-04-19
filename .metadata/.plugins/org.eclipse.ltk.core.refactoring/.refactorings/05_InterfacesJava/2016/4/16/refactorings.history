@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;plazasOcupadas&apos; in &apos;Taxi&apos; to &apos;plazasVehiculo&apos;&#x0A;- Original project: &apos;05_InterfacesJava&apos;&#x0A;- Original element: &apos;Taxi.plazasOcupadas&apos;&#x0A;- Renamed element: &apos;Taxi.plazasVehiculo&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;plazasOcupadas&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;{Taxi.java[Taxi^plazasOcupadas" name="plazasVehiculo" references="true" setter="false" stamp="1461086405190" textual="false" version="1.0"/>
+</session>

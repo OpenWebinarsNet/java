@@ -1,0 +1,48 @@
+
+public class Taxi implements IVehiculo {
+	String matricula;
+	int velocidadActual;
+	int plazasOcupadas;
+	
+	public Taxi() {
+		matricula = "";
+		velocidadActual = 0;
+		plazasOcupadas = 0;
+	}
+
+	public Taxi(String matricula, int velocidadActual, int plazasOcupadas) {
+		super();
+		this.matricula = matricula;
+		this.velocidadActual = velocidadActual;
+		this.plazasOcupadas = plazasOcupadas;
+	}
+
+	@Override
+	public int getVelocidad() {
+		return velocidadActual;
+	}
+
+	@Override
+	public void acelerar(int velocidadIncremento) {
+		this.velocidadActual += velocidadIncremento;	
+	}
+
+	@Override
+	public void frenar(int velocidadDeFrenada) {
+		this.velocidadActual -= velocidadDeFrenada;	
+	}
+
+	@Override
+	public int getNumPlazas() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getVelocidadMaxima() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+}

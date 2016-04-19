@@ -1,0 +1,10 @@
+
+public class Autobus {
+	String matricula;
+	int velocidadActual;
+	int plazasVehiculo;
+	public static final int VELOCIDAD_MAX_BUS = 90;
+	
+	
+
+}

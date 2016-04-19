@@ -1,0 +1,21 @@
+
+public class Taxi{
+	String matricula;
+	int velocidadActual;
+	int plazasOcupadas;
+	
+	public Taxi() {
+		matricula = "";
+		velocidadActual = 0;
+		plazasOcupadas = 0;
+	}
+
+	public Taxi(String matricula, int velocidadActual, int plazasOcupadas) {
+		super();
+		this.matricula = matricula;
+		this.velocidadActual = velocidadActual;
+		this.plazasOcupadas = plazasOcupadas;
+	}
+	
+	
+}

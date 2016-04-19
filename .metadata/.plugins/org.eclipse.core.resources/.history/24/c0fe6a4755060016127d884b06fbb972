@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main { 
+	public static final TAXI = 1;
+	public static final BUS = 2;
+	
+	public static void main(String[] args) {
+		IVehiculo vehiculo;
+		
+		
+		Scanner sc = new Scanner(System.in);
+		sc.useDelimiter("[:\\s]");
+		
+		System.out.print("Qué vehículo de nuestra flota desea utilizar:\n"
+				+ "1) Taxi\n"
+				+ "2) Autobús\n");
+		
+		int vehiculoSeleccionado = Integer.parseInt(sc.next());
+		
+		if(vehicu)
+
+	}
+
+}
