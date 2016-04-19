@@ -1,0 +1,10 @@
+
+public class GestionEmpleados {
+
+	public GestionEmpleados() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+}

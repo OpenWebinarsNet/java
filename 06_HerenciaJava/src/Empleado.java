@@ -8,7 +8,6 @@ public class Empleado {
 	private String nif;
 	private String codigoIban;
 	
-	
 	// Constructor
 	public Empleado(String nombre, String apellidos, int salario, String nif, String codigoIban) {
 		super();
@@ -70,7 +69,7 @@ public class Empleado {
 	public String toString() {
 		return "Apellidos y nombre: "+this.apellidos+", "+this.nombre+"\n"
 				+ "NIF: "+this.nif+"\n"
-						+ "Salario: "+this.salario+"\n"
+						+ "Salario: "+this.salario+"€ brutos/año\n"
 						+ "IBAN: "+this.codigoIban;
 				
 	}

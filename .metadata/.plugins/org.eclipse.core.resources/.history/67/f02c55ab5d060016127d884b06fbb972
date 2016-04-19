@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class GestionEmpleados {
+	private List<Empleado> listaEmpleados;
+	
+	public GestionEmpleados() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public void mostrarMenu() {
+	
+	listaEmpleados = new ArrayList<Empleado>();
+	
+	Scanner sc = new Scanner(System.in);
+	sc.useDelimiter("[:\\s]");
+	
+		System.out.println("Introduzca la opción que desee:"
+			+ "1) Insertar un empleado\n"
+			+ "2) Eliminar un empleado\n"
+			+ "2) Mostrar todos los empleados\n");
+	
+		int opcionMenu = Integer.parseInt(sc.next());
+	}
+}

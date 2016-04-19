@@ -1,0 +1,66 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class GestionEmpleados {
+	private List<Empleado> listaEmpleados;
+	Scanner sc = new Scanner(System.in);
+	
+	public GestionEmpleados() {
+		super();
+		sc.useDelimiter("[:\\s]");
+
+	}
+
+	public void mostrarMenu() {
+	
+		listaEmpleados = new ArrayList<Empleado>();
+	
+		System.out.println("Introduzca la opción que desee:"
+			+ "1) Insertar un empleado\n"
+			+ "2) Eliminar un empleado\n"
+			+ "2) Mostrar todos los empleados\n");
+	
+		int opcionMenu = Integer.parseInt(sc.next());
+		
+		switch(opcionMenu) {
+			case 1: insertarEmpleado(); break;
+			case 2: eliminarEmpleado(); break;
+			case 3: listarEmpleados(); break;
+		}
+	}
+
+	private void listarEmpleados() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void eliminarEmpleado() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void insertarEmpleado() {
+		System.out.print("Nombre: ");
+		String nombre = sc.next();
+		
+		System.out.print("\nApellidos: ");
+		String apellidos = sc.next();
+		
+		System.out.print("\nSalario: ");
+		int salario = Integer.parseInt(sc.next());
+		
+		System.out.print("\nNIF: ");
+		String nif = sc.next();
+		
+		System.out.print("\nIBAN: ");
+		String iban = sc.next();
+		
+		Empleado nuevoEmpleado = new Empleado(nombre, apellidos, salario, nif, iban);
+		
+		// Añadimos el empleado que acabamos de crear con los datos
+		// que el usuario ha introducido, con el método add
+		listaEmpleados.add(nuevoEmpleado);
+		
+	}
+}

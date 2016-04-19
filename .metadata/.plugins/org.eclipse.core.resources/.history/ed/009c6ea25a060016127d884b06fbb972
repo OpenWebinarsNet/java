@@ -1,0 +1,10 @@
+
+public class Comercial extends Empleado {
+	private int comision;
+
+	public Comercial(String nombre, String apellidos, int salario, String nif, String codigoIban, int comision) {
+		super(nombre, apellidos, salario, nif, codigoIban);
+		// TODO Auto-generated constructor stub
+	}
+
+}

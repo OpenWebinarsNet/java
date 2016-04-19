@@ -1,0 +1,9 @@
+
+public class Jefe extends Empleado {
+
+	public Jefe(String nombre, String apellidos, int salario, String nif, String codigoIban) {
+		super(nombre, apellidos, salario, nif, codigoIban);
+		// TODO Auto-generated constructor stub
+	}
+
+}

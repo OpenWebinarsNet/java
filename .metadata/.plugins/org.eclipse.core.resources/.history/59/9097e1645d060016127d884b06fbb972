@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		List<Empleado> listaEmpleados;
+		
+		listaEmpleados = new ArrayList<Empleado>();
+		
+		Scanner sc = new Scanner(System.in);
+		sc.useDelimiter("[:\\s]");
+		
+		System.out.println("Introduzca la opción que desee:"
+				+ "1) Insertar un empleado\n"
+				+ "2) Eliminar un empleado\n"
+				+ "2) Mostrar todos los empleados\n");
+		
+	}
+
+}
