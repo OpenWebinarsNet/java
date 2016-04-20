@@ -85,13 +85,12 @@ public class JugadorDao {
 	
 	public void mostrarRanking() {
 		try {
-			//ResultSet rs = st.executeQuery("select * from jugador");
-			ResultSet rs = st.executeQuery("select * from jugador ORDER BY partidasGanadas DESC");
+			ResultSet rs = st.executeQuery("select * from jugador");
 
 			while(rs.next()) {
 				int numeroPartidas = rs.getInt(3);
-				String nombre = rs.getString(2);
-				System.out.println("Nombre: "+nombre+", "+numeroPartidas);
+				int nombre = rs.getInt(2);
+				System.out.println("Nombre"+nombre+", "+numeroPartidas);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

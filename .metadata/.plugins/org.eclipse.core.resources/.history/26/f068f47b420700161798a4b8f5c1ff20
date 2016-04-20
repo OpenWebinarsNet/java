@@ -91,7 +91,7 @@ public class JugadorDao {
 			while(rs.next()) {
 				int numeroPartidas = rs.getInt(3);
 				String nombre = rs.getString(2);
-				System.out.println("Nombre: "+nombre+", "+numeroPartidas);
+				System.out.println("Nombre"+nombre+", "+numeroPartidas);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
