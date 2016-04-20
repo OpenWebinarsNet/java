@@ -1,0 +1,19 @@
+
+public class Jugador {
+	private int id;
+	private String nombre;
+	private int partidasGanadas;
+
+	public Jugador() {
+		
+	}
+
+	public Jugador(int id, String nombre, int partidasGanadas) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.partidasGanadas = partidasGanadas;
+	}
+	
+	
+}

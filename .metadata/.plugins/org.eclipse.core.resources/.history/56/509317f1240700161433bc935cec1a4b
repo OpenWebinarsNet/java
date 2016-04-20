@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+
+	public static void main(String[] args) {
+		JugadorDao jDao = new JugadorDao();
+		
+		Scanner sc = new Scanner(System.in);
+		sc.useDelimiter("[:\\s]");
+		
+		System.out.println("*** NUEVA PARTIDA ***\n"
+				+ "1) 2 jugadores\n"
+				+ "2) Jugar contra la máquina\n"
+		);
+		
+		seleccionarJugadores();
+		
+		mostrarTablero();
+		
+	}
+
+	
+
+}

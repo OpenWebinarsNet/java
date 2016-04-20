@@ -1,0 +1,81 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JugadorDao {
+	public Connection conexion;
+	public static final String dbname="tresenlinea", user="openwebinars", pass="owjava";
+	public Statement st;
+	
+	public JugadorDao() {
+		this.conectar();    
+	}
+	
+	// El método conectar realiza la conexión con la BBDD MySQL 'tresenlinea'
+	public void conectar() {
+		String url = "jdbc:mysql://localhost:3306/";
+	    String driver = "com.mysql.jdbc.Driver";
+	    
+	    try {
+			Class.forName(driver).newInstance();
+			conexion = DriverManager.getConnection(url+dbname,user,pass);
+	        
+	        if(!conexion.isClosed()) {
+	            System.out.println("Conexión con BBDD realizada");
+	        }
+	        
+	        st = conexion.createStatement();
+	        
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}
+	    
+	    
+	}
+	
+	public boolean insertar(Jugador j) {
+		boolean existe = false;
+		try {
+			ResultSet rs = st.executeQuery("select * from jugador WHERE nombre='"+j.getNombre()+"'");
+
+			if(rs.next()) {
+				existe = false;
+			} else  {
+				st.executeUpdate("INSERT INTO jugador (nombre, partidasGanadas) "
+			        + "VALUES ('" + j.getNombre() + "','" + j.getPartidasGanadas()  + "' )");
+				existe =  true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return existe;
+	}
+	
+	public void modificarNombre(String nombreActual, String nombreNuevo) {
+		try {
+			st.executeUpdate("UPDATE jugador SET nombre='"+nombreNuevo+"' WHERE nombre='"+nombreActual+"'");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void actualizarPartidasGanadas(String nombreJugador) {
+		ResultSet rs = st.executeQuery("select * from jugador WHERE nombre='"+j.getNombre()+"'");
+
+		if(rs.next()) {
+			existe = false;
+		try {
+			st.executeUpdate("UPDATE jugador SET partidasGanadas="+partidas+" WHERE id="+j.getId());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+}

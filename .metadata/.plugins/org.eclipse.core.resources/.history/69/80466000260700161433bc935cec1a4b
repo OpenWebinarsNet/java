@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class Juego {
+	public String nombreJugador1, nombreJugador2;
+	public Jugador j1, j2;
+	public JugadorDao jDao;
+	
+	public Juego() {
+		jDao = new JugadorDao();
+		
+		
+		seleccionOpcionMenu();
+		
+		mostrarTablero();
+	}
+
+	private void seleccionOpcionMenu() {
+
+		Scanner sc = new Scanner(System.in);
+		sc.useDelimiter("[:\\s]");
+		
+		System.out.println("*** 3 EN LINEA ***\n"
+				+ "1) 2 jugadores\n"
+				+ "2) Jugar contra la máquina\n"
+				+ "3) Mostrar Ranking jugadores"
+				+ "4) Modificar nombre jugador"
+		);
+		
+		System.out.print("Indique el tipo de juego:");
+		int tipoJuego = sc.nextInt();
+		
+		if(tipoJuego==1) {
+			System.out.print("Indique nombre jugador 1:");
+			nombreJugador1 = sc.next();
+			j1 = new Jugador(nombreJugador1);
+			jDao.insertar(j1);
+			
+			System.out.print("\nIndique nombre jugador 2:");
+			nombreJugador2 = sc.next();
+			j2 = new Jugador(nombreJugador2);
+			jDao.insertar(j2);
+			
+		} else if(tipoJuego==2) {
+			System.out.print("Indique su nombre:");
+			nombreJugador1 = sc.nextLine();
+			j1 = new Jugador(nombreJugador1);
+			jDao.insertar(j1);
+		} else if(tipoJuego==3) {
+			System.out.println("**** RANKING *****");
+		}
+		
+	}
+
+	private void mostrarTablero() {
+		System.out.println("Juego de "+nombreJugador1+" VS "+nombreJugador2);
+		
+		int numeroCasilla = 1;
+		for(int fila=0; fila<3; fila++) {
+			for(int columna=0; columna<3; columna++) {
+				System.out.print("_ ("+numeroCasilla+")");
+				numeroCasilla++;
+			}
+			System.out.println("");
+		}
+		
+	}
+}

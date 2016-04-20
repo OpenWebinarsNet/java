@@ -1,0 +1,36 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Conexion {
+	private String db, user, pass;
+	private Connection conn;
+	
+	public Conexion () {
+		
+	}
+	
+	public Conexion(String db, String user, String pass) {
+		super();
+		this.db = db;
+		this.user = user;
+		this.pass = pass;
+	}
+
+
+
+	public void conectar () {
+		String url = "jdbc:mysql://localhost:3306/";
+		String driver = "com.mysql.jdbc.Driver";
+		
+		
+		try {
+			Class.forName(driver).newInstance();
+			conn = DriverManager.getConnection(url+db,user,pass);
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

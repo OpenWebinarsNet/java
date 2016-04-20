@@ -1,0 +1,18 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+
+	public static void main(String[] args) {
+		  Map<String, Empleado> mapaEmpleados = new  HashMap<String, Empleado>();
+		  
+		  Empleado e1 = new Empleado("Juan","Perez",10000,"1234Y","ES421234");
+		  
+		  mapaEmpleados.put("1234Y", e1);
+		  
+		  Empleado empleado1 = mapaEmpleados.get("1234Y");
+		  System.out.println("EMPLEADO CONSULTADO: "+empleado1);
+		  
+	}
+
+}

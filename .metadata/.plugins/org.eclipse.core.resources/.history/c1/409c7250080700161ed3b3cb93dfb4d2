@@ -1,0 +1,22 @@
+
+public class Conexion {
+	private String db, user, pass;
+	
+	public Conexion () {
+		
+	}
+	
+	
+	public Conexion(String db, String user, String pass) {
+		super();
+		this.db = db;
+		this.user = user;
+		this.pass = pass;
+	}
+
+
+
+	public void conectar () {
+		
+	}
+}
